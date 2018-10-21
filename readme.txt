@@ -142,6 +142,10 @@ This guaranties your safety as a plugin customer. The feePercent and maxFee valu
 
 == Changelog ==
 
+= 2.3.4 =
+
+* Add stable price feature, fixed your ERC20 tokens' rate to 1:1 USD. So you can receive USDT, TUSD. 
+
 
 = 2.3.3 =
 
