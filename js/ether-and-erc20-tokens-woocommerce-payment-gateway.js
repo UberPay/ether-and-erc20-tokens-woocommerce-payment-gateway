@@ -1048,7 +1048,11 @@ function epg_pay_ether() {
 function epg_getTokenRate(tokenAddress) {
 	var tokenInfo = epg_getTokenInfoByAddress(tokenAddress);
 	if (tokenInfo) {
-		return parseFloat(tokenInfo.rate);
+    if ('yes' == window.epg.stable_price) {
+      return 1;
+    } else {
+      return parseFloat(tokenInfo.rate);
+    }
 	}
 	return null;
 }

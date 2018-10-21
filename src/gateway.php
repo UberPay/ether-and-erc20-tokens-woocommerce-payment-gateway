@@ -352,7 +352,13 @@ class Gateway extends WC_Payment_Gateway {
      */
     public function payment_fields() {
         $total = WC()->cart->total;
-        $currency = get_woocommerce_currency();
+        $stable_price = $this->settings['stable_price'];
+
+        if ('yes' == $stable_price) {
+            $currency = 'USD';
+        } else {
+            $currency = get_woocommerce_currency();
+        }
         try {
             $convertor = new CurrencyConvertor($currency, 'ETH');
             $eth_value = $convertor->convert($total);
@@ -509,6 +515,13 @@ class Gateway extends WC_Payment_Gateway {
                 'label' => __('Disallow customer to pay with Ether', 'ether-and-erc20-tokens-woocommerce-payment-gateway'),
                 'type' => 'checkbox',
                 'description' => __('This option is useful to accept only some token. It is an advanced option. Use with care.', 'ether-and-erc20-tokens-woocommerce-payment-gateway'),
+                'default' => 'no',
+            ),
+            'stable_price' => array(
+                'title' => __('Use stable price', 'ether-and-erc20-tokens-woocommerce-payment-gateway'),
+                'label' => __('Use stable price, like USDT, TUSD', 'ether-and-erc20-tokens-woocommerce-payment-gateway'),
+                'type' => 'checkbox',
+                'description' => __('If you wanna receive stable token like USDT, TUSD, it will automatically convert the rate to 1:1 USD and the "token_price_eth" field will become invalid', 'ether-and-erc20-tokens-woocommerce-payment-gateway'),
                 'default' => 'no',
             ),
             'gas_limit' => array(
@@ -764,7 +777,11 @@ class Gateway extends WC_Payment_Gateway {
                 // $valuePayment is in some ERC20 token
                 $tokens_supported = $tokens_supported;
                 $decimals_token = intval(woo_eth_erc20_get_token_decimals($currencyPayment, $providerUrl)->toString());
-                $rate = ether_and_erc20_tokens_woocommerce_payment_gateway_getTokenRate($tokens_supported, $currencyPayment);
+                if ('yes' == $this->settings['stable_price']) {
+                    $rate = 1;
+                } else {
+                    $rate = ether_and_erc20_tokens_woocommerce_payment_gateway_getTokenRate($tokens_supported, $currencyPayment);
+                }
                 $value = round(($valuePayment / pow(10, $decimals_token)) * doubleval($rate), 5, PHP_ROUND_HALF_UP);
                 $value_eth_token = $this->apply_markup_token($eth_value);
                 $paymentSuccess = ($value >= $value_eth_token);
@@ -1325,6 +1342,7 @@ class Gateway extends WC_Payment_Gateway {
                 'eth_value' => esc_html($eth_value),
                 'eth_value_with_dust' => esc_html($eth_value_with_dust),
                 'order_id' => $order_id,
+                'stable_price' => esc_html($this->settings['stable_price']),
                 'web3Endpoint' => esc_html($web3Endpoint),
                 // translations
 //                'str_page_unload_text' => __('Do not close or reload this page until payment confirmation complete.', 'ether-and-erc20-tokens-woocommerce-payment-gateway'),
