@@ -1,0 +1,672 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: ether-and-erc20-tokens-woocommerce-payment-gateway\n"
+"POT-Creation-Date: 2018-07-20 20:14+0700\n"
+"PO-Revision-Date: 2018-10-21 21:12+0800\n"
+"Language-Team: ethereumicoio\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 2.2\n"
+"X-Poedit-Basepath: ..\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Poedit-KeywordsList: __;_e\n"
+"Last-Translator: \n"
+"Language: zh_CN\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: vendor\n"
+"X-Poedit-SearchPathExcluded-1: node_modules\n"
+
+#: ether-and-erc20-tokens-woocommerce-payment-gateway.php:65
+msgid "Settings"
+msgstr "设置"
+
+#: src/gateway.php:25 src/gateway.php:35
+msgid "Unknown network name in configuration settings"
+msgstr "未知的网路设定"
+
+#: src/gateway.php:119 src/gateway.php:148
+#, php-format
+msgid "call contract %s method %s for market %s for order %s"
+msgstr ""
+
+#: src/gateway.php:176
+#, php-format
+msgid "call contract %s method decimals"
+msgstr ""
+
+#: src/gateway.php:220 src/gateway.php:643
+msgid "Pay with Ether or ERC20 token"
+msgstr "使用 ETH 或ERC20 Token付款"
+
+#: src/gateway.php:374
+#, php-format
+msgid ""
+"Payment of %s ETH or an equvalent in ERC20 supported tokens will be due."
+msgstr "將扣除大約 %s 的 ETH 或 ERC20 Token "
+
+#: src/gateway.php:379
+#, php-format
+msgid "Problem performing currency conversion: %s"
+msgstr "执行汇率换算时遇到问题：%s"
+
+#: src/gateway.php:386
+msgid ""
+"Unable to provide an order value in ETH at this time. Please contact support."
+msgstr "无法提供该订单之ETH金额，请联络管理员"
+
+#: src/gateway.php:403
+msgid ""
+"ETH price quote has been updated, please check and confirm before proceeding."
+msgstr "ETH价格已变更，请在结帐前再次确认"
+
+#: src/gateway.php:443
+msgid "Enable / disable"
+msgstr "启用 / 关闭"
+
+#: src/gateway.php:444
+msgid "Enable payment with Ether or ERC20 tokens"
+msgstr "启用ETH 或 ERC20 Token 付款功能"
+
+#: src/gateway.php:452
+msgid "Basic settings"
+msgstr "基本设置"
+
+#: src/gateway.php:457
+msgid "Enable debug mode"
+msgstr "启用侦测模式"
+
+#: src/gateway.php:458
+msgid "Enable only if you are diagnosing problems."
+msgstr "仅在诊断问题时启用"
+
+#: src/gateway.php:460
+#, php-format
+msgid "Log interactions inside <code>%s</code>"
+msgstr "在<code>%s</code>中记录交互"
+
+#: src/gateway.php:464
+msgid "Title"
+msgstr "标题"
+
+#: src/gateway.php:466
+msgid ""
+"This controls the name of the payment option that the user sees during "
+"checkout."
+msgstr "这将控制用户在结帐时看到的付款选项的名称"
+
+#: src/gateway.php:467
+msgid "Pay with ETH or ERC20 token"
+msgstr "使用 ETH 或 ERC20 token 付款"
+
+#: src/gateway.php:470
+msgid "Short description"
+msgstr "简短介绍"
+
+#: src/gateway.php:472
+msgid ""
+"This controls the description of the payment option that the user sees "
+"during checkout."
+msgstr "这将控制用户在结帐时看到的付款选项的说明"
+
+#: src/gateway.php:478
+msgid "API credentials"
+msgstr "API 凭证"
+
+#: src/gateway.php:483
+msgid "Infura API Key"
+msgstr "Infura API Key"
+
+#: src/gateway.php:485
+#, php-format
+msgid ""
+"<p>The API key for the <a target=\"_blank\" href=\"%s\">%s</a>. You need to "
+"register on this site to obtain it.</p>"
+msgstr ""
+"<p>这个api key 是给 <a target=“_blank” href=“%s”>%s</a> 使用. 您需要注册以获"
+"取它.</p>"
+
+#: src/gateway.php:489
+msgid "Blockchain"
+msgstr "区块链"
+
+#: src/gateway.php:485
+msgid ""
+"<p>The blockchain used: mainnet or ropsten. Use mainnet in production, and "
+"ropsten in test mode.</p>"
+msgstr ""
+"<p>使用之区块链：mainnet或ropsten。 在正式环境中使用mainnet，在测试模式下使用"
+"ropsten。</ p>"
+
+#: src/gateway.php:497 src/main.php:139
+msgid "Payment details"
+msgstr "付款资讯"
+
+#: src/gateway.php:502
+msgid "Your ethereum address"
+msgstr "你的以太币收款地址"
+
+#: src/gateway.php:504
+msgid ""
+"The ethereum address payment should be sent to. Make sure to use one address "
+"per one online store. Do not use one address for two or more stores! Also, "
+"make sure to use a ERC20 tokens compatible wallet if you are planning to "
+"accept it!"
+msgstr ""
+"这个以太坊钱包应该可以成功收款。确认你在每一个商店分别使用不同钱包地址，千万"
+"不要在两个商店使用一个钱包地址！另外如果您要接受ERC20 Tokens，也请确认您的钱"
+"包可以收受ERC20 Tokens"
+
+#: src/gateway.php:508
+msgid "Supported ERC20 tokens list"
+msgstr "要支援的ERC20 Tokens 列表"
+
+#: src/gateway.php:510
+msgid ""
+"Provide a list of tokens you want to support. It should be in a format like "
+"this: Token_symbol1:token_eth_address1:token_price_eth1,Token_symbol2:"
+"token_eth_address2:token_price_eth2. For example: "
+"TSX:0xe762Da33bf2b2412477c65b01f46D923A7Ef5794:0.001,"
+"EOS:0x86Fa049857E0209aa7D9e616F7eb3b3B78ECfdb0:0.01054550"
+msgstr ""
+"提供一个你要使用的列表，它应该长的像这样Token_symbol1:token_eth_address1:"
+"token_price_eth1,Token_symbol2:token_eth_address2:token_price_eth2. 举例: "
+"TSX:0xe762Da33bf2b2412477c65b01f46D923A7Ef5794:0.001,"
+"EOS:0x86Fa049857E0209aa7D9e616F7eb3b3B78ECfdb0:0.01054550"
+
+#: src/gateway.php:514
+msgid "Disable Ether"
+msgstr "关闭ETH付款功能"
+
+#: src/gateway.php:515
+msgid "Disallow customer to pay with Ether"
+msgstr "禁止客户使用ETH付款"
+
+#: src/gateway.php:517
+msgid ""
+"This option is useful to accept only some token. It is an advanced option. "
+"Use with care."
+msgstr "此选项对于只打算接受某些令牌有用。 这是一个进阶选项，请小心使用。"
+
+#: src/gateway.php:521
+msgid "Use stable price"
+msgstr "使用稳定汇率"
+
+#: src/gateway.php:524
+msgid ""
+"If you wanna receive stable token like USDT, TUSD, it will automatically "
+"convert the rate to 1:1 USD and the \"token_price_eth\" field will become "
+"invalid"
+msgstr ""
+"如果您想要收受稳定货币，如USDT, TUSD，那么这自动将您的收款汇率调整为 1:1 美"
+"金，而且”token_price_eth”栏位将无效"
+
+#: src/gateway.php:528
+msgid "Gas limit"
+msgstr "Gas 限制"
+
+#: src/gateway.php:530
+msgid "The gas limit for transaction."
+msgstr "交易的Gas限制"
+
+#: src/gateway.php:534
+msgid "Gas price, Gwei"
+msgstr "Gas price, Gwei"
+
+#: src/gateway.php:536
+msgid "The gas price for transaction."
+msgstr "交易的Gas 数量"
+
+#: src/gateway.php:540
+msgid "Mark Ether price up by %"
+msgstr "提高百分之几的ETH价格"
+
+#: src/gateway.php:541
+msgid ""
+"To help cover currency fluctuations the plugin can automatically mark up "
+"converted rates for you. These are applied as percentage markup, so a 1ETH "
+"value with a 1.00% markup will be presented to the customer as 1.01ETH."
+msgstr ""
+"为了帮助弥补货币波动，插件可以自动为您标记转换后的汇率。 这些作为百分比标记应"
+"用，因此带有1.00％标记的1ETH值将作为1.01ETH呈现给客户。"
+
+#: src/gateway.php:542
+msgid "Mark ERC20 token price up by %"
+msgstr "提高百分之几的ERC20 Tokens价格"
+
+#: src/gateway.php:553
+msgid ""
+"To help cover currency fluctuations the plugin can automatically mark up "
+"converted rates for you. These are applied as percentage markup, so a 1 "
+"ERC20 Token value with a 1.00% markup will be presented to the customer as "
+"1.01 Token."
+msgstr ""
+"为了帮助弥补货币波动，插件可以自动为您标记转换后的汇率。 这些作为百分比标记应"
+"用，因此具有1.00％标记的1 ERC20令牌值将作为1.01令牌呈现给客户。"
+
+#: src/gateway.php:567
+msgid "Need help to configure this plugin?"
+msgstr ""
+
+#: src/gateway.php:573 src/gateway.php:581
+#, php-format
+msgid "Feel free to %1$shire me!%2$s"
+msgstr ""
+
+#: src/gateway.php:578
+msgid "Need help to develop a ERC20 token for your ICO?"
+msgstr ""
+
+#: src/gateway.php:589
+msgid "Want to sell your ERC20/ERC223 ICO token from your ICO site?"
+msgstr ""
+
+#: src/gateway.php:592
+#, php-format
+msgid "Install the %1$sThe EthereumICO Wordpress plugin%2$s!"
+msgstr ""
+
+#: src/gateway.php:600
+msgid "Want to sell ERC20 token for fiat and/or Bitcoin?"
+msgstr ""
+
+#: src/gateway.php:603
+#, php-format
+msgid "Install the %1$sCryptocurrency Product for WooCommerce plugin%2$s!"
+msgstr ""
+
+#: src/gateway.php:611
+msgid "Want to create Ethereum wallets on your Wordpress site?"
+msgstr ""
+
+#: src/gateway.php:614
+#, php-format
+msgid "Install the %1$sWordPress Ethereum Wallet plugin%2$s!"
+msgstr ""
+
+#: src/gateway.php:644
+#, php-format
+msgid ""
+"Your customers will be given instructions about where, and how much to pay. "
+"Your orders will be marked as on-hold when they are placed. And as complete "
+"when payment is recieved. You can update your orders on the <a href=\"%s"
+"\">WooCommerce Orders</a> page."
+msgstr ""
+"您的客户将获得有关支付方式和支付金额的说明。 您的订单在下单时将被标记为暂"
+"存。 并在收到付款时完成。 您可以在<a href=“%s”> WooCommerce订单</a>页面上更新"
+"订单。"
+
+#: src/gateway.php:673
+#, php-format
+msgid "Order submitted, and payment with %s requested."
+msgstr "已提交订单，并已请求 %s 付款。"
+
+#: src/gateway.php:681
+#, php-format
+msgid "Order value calculated as %f %s"
+msgstr "订单价值计算为 %f %s"
+
+#: src/gateway.php:685
+msgid "Awaiting payment."
+msgstr "等待中的订单"
+
+#: src/gateway.php:724
+#, php-format
+msgid "Order do not need payment, tx check stopped: %s"
+msgstr "订单不需要付款，tx检查停止：%s"
+
+#: src/gateway.php:738
+#, php-format
+msgid "Order expired.  Order updated to failed: %s"
+msgstr "订单已过期。 订单已更新为失败：%s"
+
+#: src/gateway.php:742 src/gateway.php:744
+msgid "Order was expired."
+msgstr "订单已过期"
+
+#: src/gateway.php:756
+#, php-format
+msgid "No payment found for order: %s"
+msgstr "找不到付款方式: %s"
+
+#: src/gateway.php:770
+#, php-format
+msgid ""
+"PaymentInfo recieved for order_id=%s. %s: %s. eth_value=%s, eth_value_wei=%s"
+msgstr "收到订单资讯，order_id=%s. %s: %s. eth_value=%s, eth_value_wei=%s"
+
+#: src/gateway.php:805 src/gateway.php:808
+msgid "Successful payment notification received. Order updated to pending."
+msgstr "收到付款成功的通知。 订单已更新为待处理。"
+
+#: src/gateway.php:814
+#, php-format
+msgid ""
+"Non-successful payment notification received. Order updated to failed: %s"
+msgstr "收到了未成功的付款通知。 订单已更新为失败：%s"
+
+#: src/gateway.php:818
+msgid "Non-successful payment notification received. Order updated to failed."
+msgstr "收到了未成功的付款通知。 订单已更新为失败。"
+
+#: src/gateway.php:820
+msgid "Non-successful payment notification."
+msgstr "未成功的付款通知。"
+
+#: src/gateway.php:838
+msgid "The ERC20 token payment consists of two steps."
+msgstr "ERC20代币支付包括两个步骤。"
+
+#: src/gateway.php:839
+msgid ""
+"Deposit funds to the payment gateway smart contract in the Ethereum "
+"blockchain, and"
+msgstr "将资金存入以太坊区块链中的支付网关智能合约，"
+
+#: src/gateway.php:840
+msgid "Use this deposit to pay for your order."
+msgstr "并使用此存款来支付您的订单。"
+
+#: src/gateway.php:841
+msgid ""
+"You have to send two transactions to the Ethereum blockchain: first for "
+"deposit and second for the real payment."
+msgstr "您必须向以太坊区块链发送两笔交易：首先是存款，第二笔是真实付款。"
+
+#: src/gateway.php:842
+msgid "Step 2: Release deposit for payment."
+msgstr "第2步：发放存款以进行付款。"
+
+#: src/gateway.php:843
+msgid ""
+"Send a command to the payment gateway smart contract to do the actual "
+"payment for you. The payment gateway smart contract can not spend your "
+"tokens without your command. And nobody except you can send this command to "
+"the gateway contract. But note, that if you cancel the order on this step "
+"and then decide to pay for this or any other order with the same token "
+"again, you'll be asked to approve 0 (zero) amount of tokens first, and only "
+"after that you'll be able to approve the desired token amount. It is true "
+"even for purchases on other stores that use the same payment gateway. It is "
+"due to the ERC20 token internal limitations."
+msgstr ""
+"向支付网关智能合约发送命令，为您进行实际支付。 没有您的命令，支付网关智能合约"
+"不能使用您的ERC20 Tokens。 除了你之外没有人可以将此命令发送到网关合同。 但请"
+"注意，如果您在此步骤中取消订单，然后再决定使用相同的ERC20 Tokens支付此订单或"
+"任何其他订单，则会要求您首先批准0（零）量的令牌，并且仅在此之后 将能够批准所"
+"需的令牌金额。 甚至对于使用相同支付网关的其他商店的购买也是如此。 这是由于"
+"ERC20 Tokens 的内部限制。"
+
+#: src/gateway.php:844
+msgid "Step 1: Deposit funds to the payment gateway smart contract."
+msgstr "第1步：将资金存入支付网关智能合约。"
+
+#: src/gateway.php:845
+msgid ""
+"This step calls the approve method on the token smart contract to allow the "
+"payment gateway contract to spend this amount of tokens on behalf of you. "
+"The Amount field is the amount of tokens you are required to pay for this "
+"order. The Value field is always 0 (zero) for token payments."
+msgstr ""
+"此步骤调用令牌智能合约上的批准方法，以允许支付网关合同代表您花费此数量的令"
+"牌。 金额字段是您需要为此订单支付的代币金额。 对于令牌付款，“Value”字段始终为"
+"0（零）。"
+
+#: src/gateway.php:846
+msgid "Payment succeeded!"
+msgstr "付款成功！"
+
+#: src/gateway.php:847
+msgid "Payment succeeded! Reload page if it was not auto reloaded."
+msgstr "付款成功！ 如果没有自动重新加载，请重新加载页面。"
+
+#: src/gateway.php:848
+msgid "Payment status: not complete."
+msgstr "付款状态：未完成。"
+
+#: src/gateway.php:849
+msgid "Payment status: deposit made."
+msgstr "付款状态：存款。"
+
+#: src/gateway.php:850
+msgid ""
+"This wizard requires the MetaMask browser extension to be installed and your "
+"MetaMask account to be unlocked. If you do not want to use MetaMask, just "
+"copy and paste Value, Address, and Data fields in your favorite wallet "
+"software. Ensure these values are quoted exactly, otherwise we won't be able "
+"to reconcile your payment."
+msgstr ""
+"此向导需要安装MetaMask浏览器扩展，并且需要您将MetaMask帐户解锁。 如果您不想使"
+"用MetaMask，只需在您喜欢的钱包软件中复制并粘贴“Value”，“Address”和“Data”字"
+"段。 确保准确引用这些值，否则我们将无法核对您的付款。"
+
+#: src/gateway.php:851
+msgid ""
+"MetaMask network mismatch. Choose another network or ask site administrator."
+msgstr "MetaMask网络不匹配。 选择其他网络或询问网站管理员。"
+
+#: src/gateway.php:897
+msgid "Choose Ether or ERC20 token"
+msgstr "选择ETH 或 ERC20 Tokens"
+
+#: src/gateway.php:930 src/gateway.php:1084 src/gateway.php:1200
+#: src/main.php:143
+msgid "Amount"
+msgstr "数量"
+
+#: src/gateway.php:934 src/gateway.php:1096 src/gateway.php:1204
+msgid "Advanced"
+msgstr "进阶"
+
+#: src/gateway.php:938 src/gateway.php:1100 src/gateway.php:1208
+msgid "Value"
+msgstr ""
+
+#: src/gateway.php:946 src/gateway.php:974 src/gateway.php:1002
+#: src/gateway.php:1108 src/gateway.php:1136 src/gateway.php:1164
+#: src/gateway.php:1216 src/gateway.php:1244 src/gateway.php:1271
+msgid "QR"
+msgstr ""
+
+#: src/gateway.php:949 src/gateway.php:977 src/gateway.php:1005
+#: src/gateway.php:1111 src/gateway.php:1139 src/gateway.php:1167
+#: src/gateway.php:1219 src/gateway.php:1247 src/gateway.php:1274
+msgid "Copy"
+msgstr "复制"
+
+#: src/gateway.php:966 src/gateway.php:1128 src/gateway.php:1236
+#: src/main.php:144
+msgid "Address"
+msgstr ""
+
+#: src/gateway.php:994 src/gateway.php:1157 src/gateway.php:1264
+msgid "Data"
+msgstr ""
+
+#: src/gateway.php:1030 src/gateway.php:1350
+msgid "Pay with MetaMask"
+msgstr "使用MetaMask付款"
+
+#: src/gateway.php:1031 src/gateway.php:1304
+msgid "Download MetaMask!"
+msgstr "下载MetaMask!"
+
+#: src/gateway.php:1046 src/gateway.php:1076 src/gateway.php:1192
+msgid "More..."
+msgstr "更多"
+
+#: src/gateway.php:1065
+msgid "1. Deposit funds"
+msgstr "1. 存入资金"
+
+#: src/gateway.php:1066
+msgid "2. Make payment"
+msgstr "2. 进行付款"
+
+#: src/gateway.php:1089
+msgid "Balance"
+msgstr "余额"
+
+#: src/gateway.php:1301
+msgid "Previous"
+msgstr "上一个"
+
+#: src/gateway.php:1303
+msgid "Next"
+msgstr "下一个"
+
+#: src/gateway.php:1349
+msgid "Deposit with MetaMask"
+msgstr "使用MetaMask存款"
+
+#: src/gateway.php:1351
+msgid "Download MetaMask"
+msgstr "下载MetaMask"
+
+#: src/gateway.php:1352
+msgid "Download MetaMask or input your ethereum address"
+msgstr "下载MetaMask或输入你的以太坊钱包地址"
+
+#: src/gateway.php:1353
+msgid "Unlock your MetaMask account please."
+msgstr "请解锁您的MetaMask帐户。"
+
+#: src/gateway.php:1354
+msgid "Failed to pay ETH with MetaMask"
+msgstr "无法使用MetaMask支付ETH"
+
+#: src/gateway.php:1355
+msgid "Pay ETH with MetaMask succeeded"
+msgstr "使用MetaMask支付ETH成功"
+
+#: src/gateway.php:1356
+msgid "Failed to deposit ETH with MetaMask"
+msgstr "无法使用MetaMask存入ETH"
+
+#: src/gateway.php:1357
+msgid "Deposit ETH with MetaMask succeeded"
+msgstr "使用MetaMask存入ETH成功"
+
+#: src/gateway.php:1358
+msgid "Failed to pay ERC20 token with MetaMask"
+msgstr "无法使用MetaMask支付ERC20 Tokens"
+
+#: src/gateway.php:1359
+msgid "Failed to pay ERC20 token: insufficient balance"
+msgstr "无法支付ERC20 Tokens：余额不足"
+
+#: src/gateway.php:1360
+msgid "Pay ERC20 token with MetaMask succeeded"
+msgstr "使用MetaMask支付ERC20 Tokens成功"
+
+#: src/gateway.php:1361
+msgid "Failed to pay ETH with MetaMask - rejected"
+msgstr "无法使用MetaMask支付ETH - 被拒绝"
+
+#: src/gateway.php:1362
+msgid "Failed to pay ERC20 token with MetaMask - rejected"
+msgstr "无法使用MetaMask支付ERC20 Tokens - 被拒绝"
+
+#: src/gateway.php:1363
+msgid "Failed to deposit ERC20 token with MetaMask"
+msgstr "无法使用MetaMask存放ERC20 Tokens"
+
+#: src/gateway.php:1364
+msgid "Failed to deposit ERC20 token: insufficient balance"
+msgstr "无法存放ERC20 Tokens：余额不足"
+
+#: src/gateway.php:1365
+msgid "Deposit ERC20 token with MetaMask succeeded"
+msgstr "使用MetaMask存放ERC20 Tokens 成功"
+
+#: src/gateway.php:1366
+msgid "Failed to deposit ETH with MetaMask - rejected"
+msgstr "无法使用MetaMask存入ETH - 被拒绝"
+
+#: src/gateway.php:1367
+msgid "Failed to deposit ERC20 token with MetaMask - rejected"
+msgstr "无法使用MetaMask存放ERC20 Tokens - 被拒绝"
+
+#: src/gateway.php:1368
+msgid "Copied to clipboard"
+msgstr "复制到剪贴板"
+
+#: src/paymentreceivedemail.php:26
+msgid "ETH/ERC20 payment completed"
+msgstr "ETH/ERC20 付款成功"
+
+#: src/paymentreceivedemail.php:27
+msgid "Notification that payment by ETH/ERC20 has been received."
+msgstr "已收到ETH / ERC20付款的通知。"
+
+#: src/paymentreceivedemail.php:28 src/paymentreceivedemail.php:29
+msgid "Payment received"
+msgstr "已收到付款"
+
+#: src/paymentreceivedemail.php:124
+msgid "Enable/Disable"
+msgstr "启用/关闭"
+
+#: src/paymentreceivedemail.php:126
+msgid "Enable this email notification"
+msgstr "启用Email 通知"
+
+#: src/paymentreceivedemail.php:130
+msgid "Subject"
+msgstr "主旨"
+
+#: src/paymentreceivedemail.php:132
+#, php-format
+msgid ""
+"This controls the email subject line. Leave blank to use the default "
+"subject: <code>%s</code>."
+msgstr "这可以控制电子邮件主旨。 留空以使用默认主旨：<code> %s </code>。"
+
+#: src/paymentreceivedemail.php:137
+msgid "Email Heading"
+msgstr "Email 标题"
+
+#: src/paymentreceivedemail.php:139
+#, php-format
+msgid ""
+"This controls the main heading contained within the email notification. "
+"Leave blank to use the default heading: <code>%s</code>."
+msgstr ""
+"它控制电子邮件通知中包含的主标题。 留空以使用默认标题：<code> %s </code>。"
+
+#: src/paymentreceivedemail.php:144
+msgid "Email type"
+msgstr "Email 类型"
+
+#: src/paymentreceivedemail.php:146
+msgid "Choose which format of email to send."
+msgstr "选择发送哪一种Email 格式"
+
+#: src/paymentreceivedemail.php:150
+msgid "Plain text"
+msgstr "纯文本"
+
+#: src/paymentreceivedemail.php:151
+msgid "HTML"
+msgstr "HTML"
+
+#: src/paymentreceivedemail.php:152
+msgid "Multipart"
+msgstr "Multipart"
+
+#: templates/emails/epg-payment-received.php:15
+#, php-format
+msgid "Payment received for order %d"
+msgstr "收到 %d 订单的付款"
+
+#: templates/emails/epg-payment-received.php:17
+#: templates/emails/plain/epg-payment-received.php:16
+msgid ""
+"Congratulations. We've received payment for your order. We've included your "
+"details below as a reminder of your order."
+msgstr ""
+"恭喜。 我们已收到您的订单付款。 我们在下方提供了您详细信息，以提醒您订购。"
+
+#: templates/emails/plain/epg-payment-received.php:14
+#, php-format
+msgid "Payment received for order %d."
+msgstr "收到 %d 订单的付款"
