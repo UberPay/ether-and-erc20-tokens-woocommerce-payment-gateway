@@ -2,7 +2,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: ether-and-erc20-tokens-woocommerce-payment-gateway\n"
-"POT-Creation-Date: 2018-07-18 04:41+0700\n"
+"POT-Creation-Date: 2018-07-20 20:14+0700\n"
 "PO-Revision-Date: 2018-03-13 09:23+0700\n"
 "Last-Translator: \n"
 "Language-Team: ethereumicoio\n"
@@ -36,114 +36,114 @@ msgstr ""
 msgid "call contract %s method decimals"
 msgstr ""
 
-#: src/gateway.php:220 src/gateway.php:615
+#: src/gateway.php:220 src/gateway.php:630
 msgid "Pay with Ether or ERC20 token"
 msgstr ""
 
-#: src/gateway.php:353
+#: src/gateway.php:368
 #, php-format
 msgid ""
 "Payment of %s ETH or an equvalent in ERC20 supported tokens will be due."
 msgstr ""
 
-#: src/gateway.php:358
+#: src/gateway.php:373
 #, php-format
 msgid "Problem performing currency conversion: %s"
 msgstr ""
 
-#: src/gateway.php:365
+#: src/gateway.php:380
 msgid ""
 "Unable to provide an order value in ETH at this time. Please contact support."
 msgstr ""
 
-#: src/gateway.php:382
+#: src/gateway.php:397
 msgid ""
 "ETH price quote has been updated, please check and confirm before proceeding."
 msgstr ""
 
-#: src/gateway.php:422
+#: src/gateway.php:437
 msgid "Enable / disable"
 msgstr ""
 
-#: src/gateway.php:423
+#: src/gateway.php:438
 msgid "Enable payment with Ether or ERC20 tokens"
 msgstr ""
 
-#: src/gateway.php:431
+#: src/gateway.php:446
 msgid "Basic settings"
 msgstr ""
 
-#: src/gateway.php:436
+#: src/gateway.php:451
 msgid "Enable debug mode"
 msgstr ""
 
-#: src/gateway.php:437
+#: src/gateway.php:452
 msgid "Enable only if you are diagnosing problems."
 msgstr ""
 
-#: src/gateway.php:439
+#: src/gateway.php:454
 #, php-format
 msgid "Log interactions inside <code>%s</code>"
 msgstr ""
 
-#: src/gateway.php:443
+#: src/gateway.php:458
 msgid "Title"
 msgstr ""
 
-#: src/gateway.php:445
+#: src/gateway.php:460
 msgid ""
 "This controls the name of the payment option that the user sees during "
 "checkout."
 msgstr ""
 
-#: src/gateway.php:446
+#: src/gateway.php:461
 msgid "Pay with ETH or ERC20 token"
 msgstr ""
 
-#: src/gateway.php:449
+#: src/gateway.php:464
 msgid "Short description"
 msgstr ""
 
-#: src/gateway.php:451
+#: src/gateway.php:466
 msgid ""
 "This controls the description of the payment option that the user sees "
 "during checkout."
 msgstr ""
 
-#: src/gateway.php:457
+#: src/gateway.php:472
 msgid "API credentials"
 msgstr ""
 
-#: src/gateway.php:462
+#: src/gateway.php:477
 msgid "Infura API Key"
 msgstr ""
 
-#: src/gateway.php:464
+#: src/gateway.php:479
 #, php-format
 msgid ""
 "<p>The API key for the <a target=\"_blank\" href=\"%s\">%s</a>. You need to "
 "register on this site to obtain it.</p>"
 msgstr ""
 
-#: src/gateway.php:468
+#: src/gateway.php:483
 msgid "Blockchain"
 msgstr ""
 
-#: src/gateway.php:470
+#: src/gateway.php:485
 msgid ""
 "<p>The blockchain used: mainnet or ropsten. Use mainnet in production, and "
 "ropsten in test mode.</p>"
 msgstr ""
 
-#: src/gateway.php:476 src/main.php:139
+#: src/gateway.php:491 src/main.php:139
 msgid "Payment details"
 msgstr ""
 
-#: src/gateway.php:481
+#: src/gateway.php:496
 msgid "Your ethereum address"
 msgstr ""
 
-#: src/gateway.php:483
+#: src/gateway.php:498
 msgid ""
 "The ethereum address payment should be sent to. Make sure to use one address "
 "per one online store. Do not use one address for two or more stores! Also, "
@@ -151,11 +151,11 @@ msgid ""
 "accept it!"
 msgstr ""
 
-#: src/gateway.php:487
+#: src/gateway.php:502
 msgid "Supported ERC20 tokens list"
 msgstr ""
 
-#: src/gateway.php:489
+#: src/gateway.php:504
 msgid ""
 "Provide a list of tokens you want to support. It should be in a format like "
 "this: Token_symbol1:token_eth_address1:token_price_eth1,Token_symbol2:"
@@ -164,52 +164,52 @@ msgid ""
 "EOS:0x86Fa049857E0209aa7D9e616F7eb3b3B78ECfdb0:0.01054550"
 msgstr ""
 
-#: src/gateway.php:493
+#: src/gateway.php:508
 msgid "Disable Ether"
 msgstr ""
 
-#: src/gateway.php:494
+#: src/gateway.php:509
 msgid "Disallow customer to pay with Ether"
 msgstr ""
 
-#: src/gateway.php:496
+#: src/gateway.php:511
 msgid ""
 "This option is useful to accept only some token. It is an advanced option. "
 "Use with care."
 msgstr ""
 
-#: src/gateway.php:500
+#: src/gateway.php:515
 msgid "Gas limit"
 msgstr ""
 
-#: src/gateway.php:502
+#: src/gateway.php:517
 msgid "The gas limit for transaction."
 msgstr ""
 
-#: src/gateway.php:506
+#: src/gateway.php:521
 msgid "Gas price, Gwei"
 msgstr ""
 
-#: src/gateway.php:508
+#: src/gateway.php:523
 msgid "The gas price for transaction."
 msgstr ""
 
-#: src/gateway.php:512
+#: src/gateway.php:527
 msgid "Mark Ether price up by %"
 msgstr ""
 
-#: src/gateway.php:513
+#: src/gateway.php:528
 msgid ""
 "To help cover currency fluctuations the plugin can automatically mark up "
 "converted rates for you. These are applied as percentage markup, so a 1ETH "
 "value with a 1.00% markup will be presented to the customer as 1.01ETH."
 msgstr ""
 
-#: src/gateway.php:524
+#: src/gateway.php:539
 msgid "Mark ERC20 token price up by %"
 msgstr ""
 
-#: src/gateway.php:525
+#: src/gateway.php:540
 msgid ""
 "To help cover currency fluctuations the plugin can automatically mark up "
 "converted rates for you. These are applied as percentage markup, so a 1 "
@@ -217,47 +217,47 @@ msgid ""
 "1.01 Token."
 msgstr ""
 
-#: src/gateway.php:539
+#: src/gateway.php:554
 msgid "Need help to configure this plugin?"
 msgstr ""
 
-#: src/gateway.php:542 src/gateway.php:553
+#: src/gateway.php:557 src/gateway.php:568
 #, php-format
 msgid "Feel free to %1$shire me!%2$s"
 msgstr ""
 
-#: src/gateway.php:550
+#: src/gateway.php:565
 msgid "Need help to develop a ERC20 token for your ICO?"
 msgstr ""
 
-#: src/gateway.php:561
+#: src/gateway.php:576
 msgid "Want to sell your ERC20/ERC223 ICO token from your ICO site?"
 msgstr ""
 
-#: src/gateway.php:564
+#: src/gateway.php:579
 #, php-format
 msgid "Install the %1$sThe EthereumICO Wordpress plugin%2$s!"
 msgstr ""
 
-#: src/gateway.php:572
+#: src/gateway.php:587
 msgid "Want to sell ERC20 token for fiat and/or Bitcoin?"
 msgstr ""
 
-#: src/gateway.php:575
+#: src/gateway.php:590
 #, php-format
 msgid "Install the %1$sCryptocurrency Product for WooCommerce plugin%2$s!"
 msgstr ""
 
-#: src/gateway.php:583
+#: src/gateway.php:598
 msgid "Want to create Ethereum wallets on your Wordpress site?"
 msgstr ""
 
-#: src/gateway.php:586
+#: src/gateway.php:601
 #, php-format
 msgid "Install the %1$sWordPress Ethereum Wallet plugin%2$s!"
 msgstr ""
 
-#: src/gateway.php:616
+#: src/gateway.php:631
 #, php-format
 msgid ""
 "Your customers will be given instructions about where, and how much to pay. "
@@ -266,88 +266,88 @@ msgid ""
 "\">WooCommerce Orders</a> page."
 msgstr ""
 
-#: src/gateway.php:645
+#: src/gateway.php:660
 #, php-format
 msgid "Order submitted, and payment with %s requested."
 msgstr ""
 
-#: src/gateway.php:653
+#: src/gateway.php:668
 #, php-format
 msgid "Order value calculated as %f %s"
 msgstr ""
 
-#: src/gateway.php:657
+#: src/gateway.php:672
 msgid "Awaiting payment."
 msgstr ""
 
-#: src/gateway.php:696
+#: src/gateway.php:711
 #, php-format
 msgid "Order do not need payment, tx check stopped: %s"
 msgstr ""
 
-#: src/gateway.php:710
+#: src/gateway.php:725
 #, php-format
 msgid "Order expired.  Order updated to failed: %s"
 msgstr ""
 
-#: src/gateway.php:714 src/gateway.php:716
+#: src/gateway.php:729 src/gateway.php:731
 msgid "Order was expired."
 msgstr ""
 
-#: src/gateway.php:728
+#: src/gateway.php:743
 #, php-format
 msgid "No payment found for order: %s"
 msgstr ""
 
-#: src/gateway.php:742
+#: src/gateway.php:757
 #, php-format
 msgid ""
 "PaymentInfo recieved for order_id=%s. %s: %s. eth_value=%s, eth_value_wei=%s"
 msgstr ""
 
-#: src/gateway.php:773 src/gateway.php:776
+#: src/gateway.php:788 src/gateway.php:791
 msgid "Successful payment notification received. Order updated to pending."
 msgstr ""
 
-#: src/gateway.php:782
+#: src/gateway.php:797
 #, php-format
 msgid ""
 "Non-successful payment notification received. Order updated to failed: %s"
 msgstr ""
 
-#: src/gateway.php:786
+#: src/gateway.php:801
 msgid "Non-successful payment notification received. Order updated to failed."
 msgstr ""
 
-#: src/gateway.php:788
+#: src/gateway.php:803
 msgid "Non-successful payment notification."
 msgstr ""
 
-#: src/gateway.php:806
+#: src/gateway.php:821
 msgid "The ERC20 token payment consists of two steps."
 msgstr ""
 
-#: src/gateway.php:807
+#: src/gateway.php:822
 msgid ""
 "Deposit funds to the payment gateway smart contract in the Ethereum "
 "blockchain, and"
 msgstr ""
 
-#: src/gateway.php:808
+#: src/gateway.php:823
 msgid "Use this deposit to pay for your order."
 msgstr ""
 
-#: src/gateway.php:809
+#: src/gateway.php:824
 msgid ""
 "You have to send two transactions to the Ethereum blockchain: first for "
 "deposit and second for the real payment."
 msgstr ""
 
-#: src/gateway.php:810
+#: src/gateway.php:825
 msgid "Step 2: Release deposit for payment."
 msgstr ""
 
-#: src/gateway.php:811
+#: src/gateway.php:826
 msgid ""
 "Send a command to the payment gateway smart contract to do the actual "
 "payment for you. The payment gateway smart contract can not spend your "
@@ -360,11 +360,11 @@ msgid ""
 "due to the ERC20 token internal limitations."
 msgstr ""
 
-#: src/gateway.php:812
+#: src/gateway.php:827
 msgid "Step 1: Deposit funds to the payment gateway smart contract."
 msgstr ""
 
-#: src/gateway.php:813
+#: src/gateway.php:828
 msgid ""
 "This step calls the approve method on the token smart contract to allow the "
 "payment gateway contract to spend this amount of tokens on behalf of you. "
@@ -372,23 +372,23 @@ msgid ""
 "order. The Value field is always 0 (zero) for token payments."
 msgstr ""
 
-#: src/gateway.php:814
+#: src/gateway.php:829
 msgid "Payment succeeded!"
 msgstr ""
 
-#: src/gateway.php:815
+#: src/gateway.php:830
 msgid "Payment succeeded! Reload page if it was not auto reloaded."
 msgstr ""
 
-#: src/gateway.php:816
+#: src/gateway.php:831
 msgid "Payment status: not complete."
 msgstr ""
 
-#: src/gateway.php:817
+#: src/gateway.php:832
 msgid "Payment status: deposit made."
 msgstr ""
 
-#: src/gateway.php:818
+#: src/gateway.php:833
 msgid ""
 "This wizard requires the MetaMask browser extension to be installed and your "
 "MetaMask account to be unlocked. If you do not want to use MetaMask, just "
@@ -397,154 +397,154 @@ msgid ""
 "to reconcile your payment."
 msgstr ""
 
-#: src/gateway.php:819
+#: src/gateway.php:834
 msgid ""
 "MetaMask network mismatch. Choose another network or ask site administrator."
 msgstr ""
 
-#: src/gateway.php:865
+#: src/gateway.php:880
 msgid "Choose Ether or ERC20 token"
 msgstr ""
 
-#: src/gateway.php:898 src/gateway.php:1055 src/gateway.php:1174
+#: src/gateway.php:913 src/gateway.php:1070 src/gateway.php:1189
 #: src/main.php:143
 msgid "Amount"
 msgstr ""
 
-#: src/gateway.php:905 src/gateway.php:1070 src/gateway.php:1181
+#: src/gateway.php:920 src/gateway.php:1085 src/gateway.php:1196
 msgid "Advanced"
 msgstr ""
 
-#: src/gateway.php:909 src/gateway.php:1074 src/gateway.php:1185
+#: src/gateway.php:924 src/gateway.php:1089 src/gateway.php:1200
 msgid "Value"
 msgstr ""
 
-#: src/gateway.php:917 src/gateway.php:945 src/gateway.php:973
-#: src/gateway.php:1082 src/gateway.php:1110 src/gateway.php:1138
-#: src/gateway.php:1193 src/gateway.php:1221 src/gateway.php:1248
+#: src/gateway.php:932 src/gateway.php:960 src/gateway.php:988
+#: src/gateway.php:1097 src/gateway.php:1125 src/gateway.php:1153
+#: src/gateway.php:1208 src/gateway.php:1236 src/gateway.php:1263
 msgid "QR"
 msgstr ""
 
-#: src/gateway.php:920 src/gateway.php:948 src/gateway.php:976
-#: src/gateway.php:1085 src/gateway.php:1113 src/gateway.php:1141
-#: src/gateway.php:1196 src/gateway.php:1224 src/gateway.php:1251
+#: src/gateway.php:935 src/gateway.php:963 src/gateway.php:991
+#: src/gateway.php:1100 src/gateway.php:1128 src/gateway.php:1156
+#: src/gateway.php:1211 src/gateway.php:1239 src/gateway.php:1266
 msgid "Copy"
 msgstr ""
 
-#: src/gateway.php:937 src/gateway.php:1102 src/gateway.php:1213
+#: src/gateway.php:952 src/gateway.php:1117 src/gateway.php:1228
 #: src/main.php:144
 msgid "Address"
 msgstr ""
 
-#: src/gateway.php:965 src/gateway.php:1131 src/gateway.php:1241
+#: src/gateway.php:980 src/gateway.php:1146 src/gateway.php:1256
 msgid "Data"
 msgstr ""
 
-#: src/gateway.php:1001 src/gateway.php:1326
+#: src/gateway.php:1016 src/gateway.php:1341
 msgid "Pay with MetaMask"
 msgstr ""
 
-#: src/gateway.php:1002 src/gateway.php:1281
+#: src/gateway.php:1017 src/gateway.php:1296
 msgid "Download MetaMask!"
 msgstr ""
 
-#: src/gateway.php:1017 src/gateway.php:1047 src/gateway.php:1166
+#: src/gateway.php:1032 src/gateway.php:1062 src/gateway.php:1181
 msgid "More..."
 msgstr ""
 
-#: src/gateway.php:1036
+#: src/gateway.php:1051
 msgid "1. Deposit funds"
 msgstr ""
 
-#: src/gateway.php:1037
+#: src/gateway.php:1052
 msgid "2. Make payment"
 msgstr ""
 
-#: src/gateway.php:1063
+#: src/gateway.php:1078
 msgid "Balance"
 msgstr ""
 
-#: src/gateway.php:1278
+#: src/gateway.php:1293
 msgid "Previous"
 msgstr ""
 
-#: src/gateway.php:1280
+#: src/gateway.php:1295
 msgid "Next"
 msgstr ""
 
-#: src/gateway.php:1325
+#: src/gateway.php:1340
 msgid "Deposit with MetaMask"
 msgstr ""
 
-#: src/gateway.php:1327
+#: src/gateway.php:1342
 msgid "Download MetaMask"
 msgstr ""
 
-#: src/gateway.php:1328
+#: src/gateway.php:1343
 msgid "Download MetaMask or input your ethereum address"
 msgstr ""
 
-#: src/gateway.php:1329
+#: src/gateway.php:1344
 msgid "Unlock your MetaMask account please."
 msgstr ""
 
-#: src/gateway.php:1330
+#: src/gateway.php:1345
 msgid "Failed to pay ETH with MetaMask"
 msgstr ""
 
-#: src/gateway.php:1331
+#: src/gateway.php:1346
 msgid "Pay ETH with MetaMask succeeded"
 msgstr ""
 
-#: src/gateway.php:1332
+#: src/gateway.php:1347
 msgid "Failed to deposit ETH with MetaMask"
 msgstr ""
 
-#: src/gateway.php:1333
+#: src/gateway.php:1348
 msgid "Deposit ETH with MetaMask succeeded"
 msgstr ""
 
-#: src/gateway.php:1334
+#: src/gateway.php:1349
 msgid "Failed to pay ERC20 token with MetaMask"
 msgstr ""
 
-#: src/gateway.php:1335
+#: src/gateway.php:1350
 msgid "Failed to pay ERC20 token: insufficient balance"
 msgstr ""
 
-#: src/gateway.php:1336
+#: src/gateway.php:1351
 msgid "Pay ERC20 token with MetaMask succeeded"
 msgstr ""
 
-#: src/gateway.php:1337
+#: src/gateway.php:1352
 msgid "Failed to pay ETH with MetaMask - rejected"
 msgstr ""
 
-#: src/gateway.php:1338
+#: src/gateway.php:1353
 msgid "Failed to pay ERC20 token with MetaMask - rejected"
 msgstr ""
 
-#: src/gateway.php:1339
+#: src/gateway.php:1354
 msgid "Failed to deposit ERC20 token with MetaMask"
 msgstr ""
 
-#: src/gateway.php:1340
+#: src/gateway.php:1355
 msgid "Failed to deposit ERC20 token: insufficient balance"
 msgstr ""
 
-#: src/gateway.php:1341
+#: src/gateway.php:1356
 msgid "Deposit ERC20 token with MetaMask succeeded"
 msgstr ""
 
-#: src/gateway.php:1342
+#: src/gateway.php:1357
 msgid "Failed to deposit ETH with MetaMask - rejected"
 msgstr ""
 
-#: src/gateway.php:1343
+#: src/gateway.php:1358
 msgid "Failed to deposit ERC20 token with MetaMask - rejected"
 msgstr ""
 
-#: src/gateway.php:1344
+#: src/gateway.php:1359
 msgid "Copied to clipboard"
 msgstr ""
 
@@ -610,19 +610,19 @@ msgstr ""
 msgid "Multipart"
 msgstr ""
 
-#: templates/emails/plain/pwe-payment-received.php:14
+#: templates/emails/epg-payment-received.php:15
 #, php-format
-msgid "Payment received for order %d."
+msgid "Payment received for order %d"
 msgstr ""
 
-#: templates/emails/plain/pwe-payment-received.php:16
-#: templates/emails/pwe-payment-received.php:17
+#: templates/emails/epg-payment-received.php:17
+#: templates/emails/plain/epg-payment-received.php:16
 msgid ""
 "Congratulations. We've received payment for your order. We've included your "
 "details below as a reminder of your order."
 msgstr ""
 
-#: templates/emails/pwe-payment-received.php:15
+#: templates/emails/plain/epg-payment-received.php:14
 #, php-format
-msgid "Payment received for order %d"
+msgid "Payment received for order %d."
 msgstr ""

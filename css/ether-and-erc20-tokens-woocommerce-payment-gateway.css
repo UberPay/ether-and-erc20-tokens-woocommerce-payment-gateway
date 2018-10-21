@@ -116,3 +116,10 @@ body.admin-bar .epg-payment-instructions .navbar,
     padding-left: 0px;
     padding-right: 0px;
 }
+
+/* workaround for black background */
+.epg-payment-instructions canvas {
+    border-color: white;
+    border-width: 8px;
+    border-style: solid;
+}

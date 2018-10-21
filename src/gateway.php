@@ -250,10 +250,25 @@ class Gateway extends WC_Payment_Gateway {
         add_action( 'wp_enqueue_scripts', array( $this, 'register_plugin_styles' ) );
         
         add_action( 'woocommerce_order_status_on-hold', array( $this, 'order_on_hold_handler' ) );
+        add_action( 'woocommerce_order_status_cancelled', array( $this, 'order_cancelled_handler' ) );
+        add_action( 'before_delete_post', array( $this, 'before_delete_post_handler' ) );
     }
 
     public function order_on_hold_handler($order_id) {
         $this->enqueue_complete_order_task($order_id);
+    }
+    
+    public function order_cancelled_handler($order_id) {
+        $this->cancel_complete_order_task($order_id);
+    }
+    
+    public function before_delete_post_handler($order_id) {
+        global $post_type;
+
+        if($post_type !== 'shop_order') {
+            return;
+        }
+        $this->cancel_complete_order_task($order_id);
     }
     
     public function enqueue_complete_order_task($order_id, $offset = 0/* seconds */) {
@@ -896,10 +911,7 @@ class Gateway extends WC_Payment_Gateway {
             <div class="col-md-12">
                 <div class="form-group">
                     <label class="control-label" for="epg-ether-amount"><?php _e('Amount', 'ether-and-erc20-tokens-woocommerce-payment-gateway'); ?></label>
-                    <input style="cursor: text;" type="text" disabled="disabled" 
-                           value="<?php esc_html_e($eth_value_with_dust_str); ?>" 
-                           id="epg-ether-amount" 
-                           class="form-control">
+                    <div id="epg-ether-amount"><?php esc_html_e($eth_value_with_dust_str); ?></div>
                 </div>
                 <p>
                     <a class="pull-left" id="epg-ether-advanced-details-button" data-toggle="collapse" href="#epg-ether-advanced-details" role="button" aria-expanded="false" aria-controls="epg-ether-advanced-details"><?php _e('Advanced', 'ether-and-erc20-tokens-woocommerce-payment-gateway'); ?></a>
@@ -1053,10 +1065,7 @@ class Gateway extends WC_Payment_Gateway {
                             </div>
                             <div class="form-group">
                                 <label class="control-label" for="epg-amount"><?php _e('Amount', 'ether-and-erc20-tokens-woocommerce-payment-gateway'); ?></label>
-                                <input style="cursor: text;" type="text" disabled="disabled" 
-                                       value="<?php esc_html_e($eth_value); ?>" 
-                                       id="epg-amount" 
-                                       class="form-control">
+                                <div id="epg-amount"><?php esc_html_e($eth_value); ?></div>
                             </div>
                             <div id="epg-balance-group" class="form-group hidden" hidden 
                                 >
@@ -1172,10 +1181,7 @@ class Gateway extends WC_Payment_Gateway {
                             </div>
                             <div class="form-group">
                                 <label class="control-label" for="epg-amount2"><?php _e('Amount', 'ether-and-erc20-tokens-woocommerce-payment-gateway'); ?></label>
-                                <input style="cursor: text;" type="text" disabled="disabled" 
-                                       value="<?php esc_html_e($eth_value); ?>" 
-                                       id="epg-amount2" 
-                                       class="form-control">
+                                <div id="epg-amount2"><?php esc_html_e($eth_value); ?></div>
                             </div>
                             <p>
                                 <a class="pull-left" id="epg-token-advanced-details-step2-button" data-toggle="collapse" href="#epg-token-advanced-details-step2" role="button" aria-expanded="false" aria-controls="epg-token-advanced-details-step2"><?php _e('Advanced', 'ether-and-erc20-tokens-woocommerce-payment-gateway'); ?></a>
@@ -1294,11 +1300,11 @@ class Gateway extends WC_Payment_Gateway {
             $min = defined( 'SCRIPT_DEBUG' ) && SCRIPT_DEBUG ? '' : '.min';
             wp_enqueue_script(
                 'wooetherc20paymentgateway', 
-                $base_url . "/js/ether-and-erc20-tokens-woocommerce-payment-gateway{$min}.js", array('jquery', 'bootstrap.wizard', 'web3', 'jquery.qrcode'), '2.3.1'
+                $base_url . "/js/ether-and-erc20-tokens-woocommerce-payment-gateway{$min}.js", array('jquery', 'bootstrap.wizard', 'web3', 'jquery.qrcode'), '2.3.3'
             );
             wp_enqueue_style(
                 'wooetherc20paymentgateway', 
-                $base_url . "/css/ether-and-erc20-tokens-woocommerce-payment-gateway.css", array('bootstrap-ether-and-erc20-tokens-woocommerce-payment-gateway'), '2.3.1'
+                $base_url . "/css/ether-and-erc20-tokens-woocommerce-payment-gateway.css", array('bootstrap-ether-and-erc20-tokens-woocommerce-payment-gateway'), '2.3.3'
             );
 
             $web3Endpoint = $this->getWeb3Endpoint();

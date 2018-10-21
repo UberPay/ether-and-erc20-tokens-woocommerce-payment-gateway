@@ -3,7 +3,7 @@ Contributors: ethereumicoio
 Tags: woocommerce, ethereum, erc20, erc223, token, e-commerce, payment, crypto, blockchain
 Requires at least: 4.7
 Tested up to: 4.9.5
-Stable tag: 2.3.1
+Stable tag: 2.3.3
 Donate link: https://etherscan.io/address/0x476Bb28Bc6D0e9De04dB5E19912C392F9a76535d
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
@@ -143,6 +143,17 @@ This guaranties your safety as a plugin customer. The feePercent and maxFee valu
 == Changelog ==
 
 
+= 2.3.3 =
+
+* Fix QR-codes for black backgrounds
+* Show/hide Amount field for Ether payment if advanced fields are hidden/shown
+* Show the Amount field as a simple text to distinguish it from the Value field to enhance user's experience
+
+= 2.3.2 =
+
+* Cancel process order task if order is cancelled or removed
+* `epg-payment-received.php does not exist` error fix
+
 = 2.3.1 =
 
 * Order would be confirmed even if user closed the payment page before transaction was confirmed
@@ -152,66 +163,3 @@ This guaranties your safety as a plugin customer. The feePercent and maxFee valu
 
 * `Mark ERC20 token price up by %` option is added. To help cover currency fluctuations the plugin can automatically mark up converted rates for you. These are applied as percentage markup, so a 1 ERC20 Token value with a 1.00% markup will be presented to the customer as 1.01 Token.
 * email content fix
-
-= 2.2.2 =
-
-* `Disallow customer to pay with Ether` option is added. It is useful to accept only some token.
-
-= 2.2.1 =
-
-* Workaround for cryptocompare.com extraParams bug
-
-= 2.2.0 =
-
-* QR codes for Value/Address/Data fields
-
-= 2.1.0 =
-
-* Show/Hide Value/Address/Data fields by the Advanced link button click
-* Set initial Gas price value for MetaMask from the admin page
-* Prevent page close if transaction still in progress
-* Bootstrap version is updated from v3 to v4
-* Namespaced bootstrap4 is used to prevent any theme conflicts: [bootstrap-namespaced](https://github.com/jonasjancarik/bootstrap-namespaced)
-
-= 2.0.4 =
-
-* Fix bootstrap4 issue for theme `electro`
-
-= 2.0.3 =
-
-* Hide currency select box if only Ether is used
-* Register bootstrap only if it is not registered yet to not break theme using bootstrap4
-* Fix deprecated warnings
-
-= 2.0.2 =
-
-* Tokens with decimals below 18 support is improved
-
-= 2.0.1 =
-
-* Documentation improvements
-
-= 2.0.0 =
-
-* The Ether payment is a simple one-step process now!
-* Admin settings simplified
-
-= 1.0.4 =
-
-* Compatibility issues fixed for other plugins using web3 object
-
-= 1.0.3 =
-
-* email l10n improvements
-
-= 1.0.2 =
-
-* Unlock MetaMask account warning is displayed if MetaMask is already installed but not logged in.
-
-= 1.0.1 =
-
-* email l10n improvements
-
-= 1.0.0 =
-
-* Initial public release

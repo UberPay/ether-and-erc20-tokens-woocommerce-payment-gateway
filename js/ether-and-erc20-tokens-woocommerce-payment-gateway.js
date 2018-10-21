@@ -199,31 +199,31 @@ function epg_fill_token_payment_info(token, cb) {
             var rate = epg_getTokenRate(tokenInfo.address);
             if (null === rate) {
                 console.log("Failed to get token rate");
-                jQuery('#epg-amount').val('');
-                jQuery('#epg-amount2').val('');
+                jQuery('#epg-amount').text('');
+                jQuery('#epg-amount2').text('');
                 cb.call(null, "Failed to get token rate", null);
                 return;
             }
             epg_get_token_decimals(tokenInfo.address, function(error, decimals) {
                 if (error) {
                     console.log(error);
-                    jQuery('#epg-amount').val('');
-                    jQuery('#epg-amount2').val('');
+                    jQuery('#epg-amount').text('');
+                    jQuery('#epg-amount2').text('');
                     cb.call(null, error, null);
                     return;
                 }
                 if (null === decimals) {
                     console.log("Failed to obtain ERC20 token decimals value");
-                    jQuery('#epg-amount').val('');
-                    jQuery('#epg-amount2').val('');
+                    jQuery('#epg-amount').text('');
+                    jQuery('#epg-amount2').text('');
                     cb.call(null, "Failed to obtain ERC20 token decimals value", null);
                     return;
                 }
                 var rate = epg_getTokenRate(tokenInfo.address);
                 if (null === rate) {
                     console.log("Failed to obtain token rate");
-                    jQuery('#epg-amount').val('');
-                    jQuery('#epg-amount2').val('');
+                    jQuery('#epg-amount').text('');
+                    jQuery('#epg-amount2').text('');
                     cb.call(null, "Failed to obtain token rate", null);
                     return;
                 }
@@ -232,8 +232,8 @@ function epg_fill_token_payment_info(token, cb) {
                 var tokenAmount2 = Math.ceil(tokenAmount * Math.pow(10, decimals.toNumber()));
                 tokenAmount = tokenAmount2 / Math.pow(10, decimals.toNumber());
 
-                jQuery('#epg-amount').val(tokenAmount);
-                jQuery('#epg-amount2').val(tokenAmount);
+                jQuery('#epg-amount').text(tokenAmount);
+                jQuery('#epg-amount2').text(tokenAmount);
                 // always zero here!
                 jQuery('#epg-value').val(0);
 
@@ -279,8 +279,8 @@ function epg_fill_token_payment_info(token, cb) {
         } else {
             console.log("failed to find token info");
             jQuery('#epg-data-value').text('');
-            jQuery('#epg-amount').val('');
-            jQuery('#epg-amount2').val('');
+            jQuery('#epg-amount').text('');
+            jQuery('#epg-amount2').text('');
             jQuery('#epg-value').val('');
             cb.call(null, "failed to find token info", null);
         }
@@ -567,7 +567,7 @@ function epg_sendTransaction_impl(cb) {
     } else {
         // 1. проверить баланс токена
         // 2. approve токена
-        var tokenAmount = parseFloat(jQuery('#epg-amount').val());
+        var tokenAmount = parseFloat(jQuery('#epg-amount').text());
         epg_get_token_balance(token, function(err, balance) {
             // balance is already in token units
             if (err) {
@@ -698,7 +698,7 @@ function epg_sendTransaction_eth_step2_impl() {
                             return;
                         }
 
-                        var tokenAmount = parseFloat(jQuery('#epg-amount').val());
+                        var tokenAmount = parseFloat(jQuery('#epg-amount').text());
                         var tokenValue = value.toNumber() / Math.pow(10, decimals.toNumber());
                         if (tokenValue < tokenAmount) {
                             console.log("Low value: ", tokenValue, token);
@@ -1074,7 +1074,7 @@ function epg_payToken_getData(tokenAddress, callback) {
             callback.call(null, "Failed to obtain a gateway contract", null);
             return;
         }
-        var tokenAmount = parseFloat(jQuery('#epg-amount').val());
+        var tokenAmount = parseFloat(jQuery('#epg-amount').text());
         var tokenValue = tokenAmount * Math.pow(10, decimals.toNumber());
         console.log("payToken params:", tokenAddress, window.epg.payment_address, window.epg.order_id, tokenValue);
         var data = contract.payToken.getData(tokenAddress, window.epg.payment_address, window.epg.order_id, tokenValue);
@@ -1589,6 +1589,13 @@ jQuery(document).ready(function () {
         });
 		jQuery('#epg-token').change(epg_tokenChange);
 		jQuery(".epg-copy-button").click(epg_copyAddress);
+        jQuery('#epg-ether-advanced-details').on("shown.bs.collapse", function(){
+            jQuery('#epg-ether-amount').parent().hide();
+        });
+        jQuery('#epg-ether-advanced-details').on("hidden.bs.collapse", function(){
+            jQuery('#epg-ether-amount').parent().show();
+        });
+        
         epg_getCurrencyPayment(function(err, currencyAddress) {
             if (err) {
                 console.log(err);
