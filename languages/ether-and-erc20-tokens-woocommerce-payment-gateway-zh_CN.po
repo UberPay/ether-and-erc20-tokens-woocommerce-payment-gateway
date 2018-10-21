@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: ether-and-erc20-tokens-woocommerce-payment-gateway\n"
 "POT-Creation-Date: 2018-07-20 20:14+0700\n"
-"PO-Revision-Date: 2018-10-21 21:12+0800\n"
+"PO-Revision-Date: 2018-10-21 21:22+0800\n"
 "Language-Team: ethereumicoio\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -135,7 +135,7 @@ msgid ""
 "<p>The blockchain used: mainnet or ropsten. Use mainnet in production, and "
 "ropsten in test mode.</p>"
 msgstr ""
-"<p>使用之区块链：mainnet或ropsten。 在正式环境中使用mainnet，在测试模式下使用"
+"<p>选择区块链：mainnet或ropsten。 在正式环境中使用mainnet，在测试模式下使用"
 "ropsten。</ p>"
 
 #: src/gateway.php:497 src/main.php:139
@@ -144,7 +144,7 @@ msgstr "付款资讯"
 
 #: src/gateway.php:502
 msgid "Your ethereum address"
-msgstr "你的以太币收款地址"
+msgstr "您的以太币收款地址"
 
 #: src/gateway.php:504
 msgid ""
@@ -153,7 +153,7 @@ msgid ""
 "make sure to use a ERC20 tokens compatible wallet if you are planning to "
 "accept it!"
 msgstr ""
-"这个以太坊钱包应该可以成功收款。确认你在每一个商店分别使用不同钱包地址，千万"
+"这个以太坊钱包应该可以成功收款。确认您在每一个商店分别使用不同钱包地址，千万"
 "不要在两个商店使用一个钱包地址！另外如果您要接受ERC20 Tokens，也请确认您的钱"
 "包可以收受ERC20 Tokens"
 
@@ -169,7 +169,7 @@ msgid ""
 "TSX:0xe762Da33bf2b2412477c65b01f46D923A7Ef5794:0.001,"
 "EOS:0x86Fa049857E0209aa7D9e616F7eb3b3B78ECfdb0:0.01054550"
 msgstr ""
-"提供一个你要使用的列表，它应该长的像这样Token_symbol1:token_eth_address1:"
+"提供一个您要使用的列表，它应该长的像这样Token_symbol1:token_eth_address1:"
 "token_price_eth1,Token_symbol2:token_eth_address2:token_price_eth2. 举例: "
 "TSX:0xe762Da33bf2b2412477c65b01f46D923A7Ef5794:0.001,"
 "EOS:0x86Fa049857E0209aa7D9e616F7eb3b3B78ECfdb0:0.01054550"
@@ -191,6 +191,10 @@ msgstr "此选项对于只打算接受某些令牌有用。 这是一个进阶�
 #: src/gateway.php:521
 msgid "Use stable price"
 msgstr "使用稳定汇率"
+
+#: src/gateway.php:522
+msgid "Use stable price, like USDT, TUSD"
+msgstr "使用稳定货币，如USDT, TUSD"
 
 #: src/gateway.php:524
 msgid ""
